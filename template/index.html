@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ryan the Kiu</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../static/js/jquery3.6.min.js"></script>
+    <link rel="stylesheet" href="../static/css/main.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="#" class="site-logo" aria-label="homepage">Ryan Kiu</a>
+      <nav class="main-nav">
+        <ul class="nav__list">
+          <li class="nav__list-item"><a href="#welcome" class="nav__link">Home</a></li>
+          <li class="nav__list-item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#experience" class="nav__link">Experience</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__link">Pricing</a>
+          </li>
+          <li class="nav__list-item"><a href="#" class="nav__link">Blog</a></li>
+        </ul>
+      </nav>
+      <nav class="account">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a class="nav__link nav__link--btn" href="#">Login</a>
+          </li>
+          <li class="nav__list-item">
+            <a
+              class="nav__link nav__link--btn nav__link--btn--highlight"
+              href="#"
+              >Join</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- <section class="home-intro">
+        <h1>Intersection Observer is pretty useful</h1>
+      </section> -->
+      <section class="home-intro" id="welcome">
+        
+        <div class="container">
+            <img id="imageBox" src="" alt="">
+            <div id="clock"></div>
+            
+            <img class="social" src="../static/imgs/wechat1.png" style="cursor: pointer;">
+            
+            <p>Talk to me</p>
+            <p>on Wechat!</p>
+            <p>点击图标添加我的微信！</p>
+        </div>
+        <div class="wechat_pop" style="display:none;">
+            <img class='x' src="../static/imgs/x.svg" alt="x">
+            <img class='qrcode'src="../static/imgs/profile_wechat.jpg" alt="self_wechat">
+        </div>
+    </section>
+
+      <div class="home-about" id="about">
+        <div class="col fade-in">
+          <h2>关于我</h2>
+          <p>本人大方开朗，善于聆听，善于学习。有过团队管理经验并了解沟通与合作的重要性。<br>遵守规则但不墨守陈规，善于Think outside the box。</p>
+        </div>
+        <div class="columns">
+          <div class="col fade-in">
+            <h2>教育背景</h2>
+            <p>·深圳中学<br>·福景外国语<br>·London International Academy<br>·Mohawk College</p>
+          </div>
+          <div class="col fade-in">
+            <h2>校外经历</h2>
+            <p>
+              ·英雄联盟东南区域联赛64强<br>
+              ·上海高校心理咨询协会个人成长课程义工<br>
+              ·NAEGFEST PUBG Squad 小组赛第二<br>
+              ·PUBG第一届世界邀请赛 北美赛区前20<br>
+              ·上海职咖会沙龙义工<br>
+              ·上海疫情团长<br>
+            </p>
+          </div>
+          <div class="col fade-in">
+            <h2>掌握技能</h2>
+            <p>
+              ·英语 雅思7.0<br>
+              ·后端python：tornado，flask，tenserflow，openpyxl，threading，open-cv，pillow，pandas，matplotlib，celery，mysql，redis，websocket<br>
+              ·前端：javascript，nodejs，jquery，websocket，json，cookie<br>
+            </p>
+          </div>
+        </div>
+        <div class="col fade-in">
+          <h2>工作经验</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        
+      </div>
+      <div class="col fade-in">
+        <h1>项目经历</h1>
+      </div>
+      <div class="home-more-stuff">
+        <div class="more-stuff-grid">
+          <img
+            src="https://unsplash.it/400"
+            alt=""
+            class="slide-in from-left"
+          />
+          <p class="slide-in from-right"id="experience">
+            Python自动化脚本:<br>核心库使用：openpyxl，smtplib<br><br>目标：通过脚本简化大量重复，繁琐与多表切换统计的步骤从而提高工作效率。<br>实现：<br>使用openpyxl读取并修改销售部门统计excel，通过简单算法计算各顾问当日与往期咨询数、通过率与业绩对比,每日整合出新统计表。
+            并通过smtplib自动发送邮件给各部门领导。<br>不足：没有实现定时自动化。
+          </p>
+        </div>
+        <div class="more-stuff-grid" >
+          <p class="slide-in from-left">
+            Python数据爬取：<br>核心库使用：scrcpy，Android ADB，pyautogui，JavaScript，Tornado web service，Thread<br><br>
+            目标：爬取小红书口红类目数据进行分析与使用以节省用人成本<br>实现：<br>
+            一、因小红书没有电脑端，使用scrcpy投屏至安卓手机，通过ADB模拟人类点击并搜索相关关键词，并逐个点击展示内容复制其分享链接上传至web端。
+            通过pyautogui模拟鼠标键盘访问其分享链接，通过JavaScript保存目标图片与文案至本地供日后使用。
+            二、使用数据实现自动化发文，一台设备日产约200条非重复笔记。后期使用多线程Thread，实现多设备同时无误运行。
+            <br>不足：使用类模拟点击爬取时需占用设备，爬取时无法实现后台运行。
+          </p>
+          <img
+            src="https://unsplash.it/401"
+            alt=""
+            class="slide-in from-right"
+          />
+        </div>
+        <div class="more-stuff-grid">
+          <img
+            src="../static/imgs/3.png"
+            alt=""
+            class="slide-in from-left"
+            style="height:400px ; width: 400px;"
+          />
+          <p class="slide-in from-right">
+            Python图像处理：<br>核心库使用：OpenCV，Pillow，Numpy<br><br>
+            目标：通过前期爬取的模特照片实现自动化修改唇色，进一步节省成本并实现在线试妆功能<br>
+            实现：<br>通过OpenCV人脸识别模块识别人脸后，把嘴唇位置以像素为单位对比原色与目标色的
+            Hue, Saturation, Value（色相，饱和度，明度）进行对比，使用算法实现把特定模特唇色修改为公司产品下的十六种不同颜色，
+            从而减少公司开支。<br>不足：无法在极端光源环境内实现理想的颜色改变。
+          </p>
+        </div>
+        <div class="more-stuff-grid">
+          <p class="slide-in from-left">
+            前端Web：<br>核心库使用：JavaScript，websocket，tornado，nosql链式，Jquery<br><br>
+            目标：公司内部匿名“吐槽”与发表意见<br>
+            实现：<br>通过websocket实时通讯实现匿名发送讯息，UI设计为高仿微信，图片传输使用七牛云。后期添加了Chrome插件版本，实现手机端与电脑端的双兼容。
+            <br>不足：手机访问不够便捷，需访问特定网址。
+          </p>
+          <img
+          src="../static/imgs/chat.gif"
+          alt=""
+          class="slide-in from-right"
+          style="height:400px ; width: 480px;"
+          />
+        </div>
+        <div class="more-stuff-grid">
+          <img
+            src="../static/imgs/2.gif"
+            alt=""
+            class="slide-in from-left"
+          />
+          <p class="slide-in from-right">
+            核心库使用：高德地图API，JavaScript，websocket，tornado，nosql链式，Jquery<br><br>
+            目标：实现线下人员走访店铺实时进度更新及沟通<br>
+            实现：<br>使用大众点评爬取的数据配合全套高德地图API生成可互动式地标点，每个地标点可独立编辑对接状态，备注，搜索以及跳转导航，使用范围加载，避免过多数据导致卡顿。内嵌在线聊天室，通过websocket实现实时聊天。
+            <br>不足：因疫情封城计划搁浅，无法进行实测。
+          </p>
+        </div>
+        <div class="more-stuff-grid">
+          <p class="slide-in from-left">
+            核心库使用：Python，JavaScript，websocket，tornado，nosql链式，Jquery<br><br>
+            目标：解决疫情团购复杂登记，接龙，统计问题<br>
+            实现：<br>通过微信登陆获取用户头像及名称，并上传网上登记购买商品，后端返回总团购数及人数，并自动生成excel统计总表。
+            <br>不足：缺少支付功能，确认付款流程需人工。
+          </p>
+          <img
+            src="../static/imgs/tuan.jpg"
+            alt=""
+            class="slide-in from-right"
+            style="height:480px ; width: 600px;"
+          />
+        </div>
+      </div>
+    </main>
+    <script src="../static/js/observers.js"></script>
+    <script src="../static/js/clock.js"></script>
+    <script src="../static/js/pop_up.js"></script>
+  </body>
+</html>

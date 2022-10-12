@@ -1,0 +1,1 @@
+rsync -avz . ubuntu@43.128.136.125:~/Code/demo/

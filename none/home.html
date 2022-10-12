@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan the Kiu</title>
+    <link rel="stylesheet" href="../static/home.css">
+    <script src="/static/jquery3.6.min.js"></script>
+
+</head>
+<body>
+    
+<main class="main">
+    <aside class="sidebar">
+        <nav class="nav">
+        <ul>
+            <li><a href="#welcome">Welcome 欢迎</a></li>
+            <li><a href="#about_me">About Me 关于我</a></li>
+            <li><a href="#experience">Experience 经历</a></li>
+            <li><a href="#projects">Projects 项目</a></li>
+        </ul>
+        </nav>
+    </aside>
+    <section class="welcome" id="welcome">
+        
+        <div class="container">
+            <img id="imageBox" src="" alt="">
+            <div id="clock"></div>
+            
+            <img class="social" src="/static/imgs/wechat1.png" style="cursor: pointer;">
+            
+            <p>Add me</p>
+            <p>on Wechat!</p>
+            <p>点击图标添加我的微信！</p>
+        </div>
+        <div class="wechat_pop" style="display:none;">
+            <img class='x' src="/static/imgs/x.svg" alt="x">
+            <img class='qrcode'src="/static/imgs/profile_wechat.jpg" alt="self_wechat">
+        </div>
+    </section>
+    <section id="about_me">
+        <h2>About Me</h2>
+        <div class="column">
+            
+        </div>
+        
+    </section>
+    <section id="experience">
+        <h3>Experience</h3>
+        <p>...</p>
+    </section>
+    <section id="projects">
+        <h3>Project Demonstration</h3>
+        <p>...</p>
+    </section>
+</main>
+
+</body>
+<script src="/static/clock.js"></script>
+<script>
+    $('body').on('click','.social',function(){
+        $('.wechat_pop').show()
+    })
+    $('.x').on('click',function(){
+        $('.wechat_pop').hide()
+    })
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+                } else {
+                    document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
+                }
+            });
+        });
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('section[id]').forEach((section) => {
+            observer.observe(section);
+        });
+    });
+</script>
+</html>
